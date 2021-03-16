@@ -1,0 +1,2 @@
+https://pyowm.readthedocs.io/en/latest/pyowm.weatherapi25.html#pyowm.weatherapi25.forecaster.Forecaster
+https://pyowm.readthedocs.io/en/latest/pyowm.weatherapi25.html#pyowm.weatherapi25.forecast.Forecast

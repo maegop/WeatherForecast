@@ -1,5 +1,5 @@
 import pyowm
-from api_key import API_KEY
+from *.api_key import API_KEY
 import pytz
 import datetime
 

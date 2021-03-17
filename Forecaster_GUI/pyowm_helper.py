@@ -2,13 +2,13 @@ import os
 import pyowm
 from datetime import datetime
 from timezone_conversion import gmt_to_eastern
-
-API_KEY = os.environ['API_KEY']
+from api_key import API_KEY
 
 owm = pyowm.OWM(API_KEY)
 mgr = owm.weather_manager()
-forecaster = mgr.forecast_at_place('New York, US', '3h')
+forecaster = mgr.forecast_at_place('Quito', '3h')
 forecast = forecaster.forecast
+
 
 def get_temperature():
     days = []
@@ -25,7 +25,7 @@ def get_temperature():
             temp_min.append(None)
             temp_max.append(None)
             days.append(date)
-        temperature = weather.temperature('fahrenheit')['temp']
+        temperature = weather.temperature('celsius')['temp']
         if not temp_min[-1] or temperature < temp_min[-1]:
             temp_min[-1] = temperature
         if not temp_max[-1] or temperature > temp_max[-1]:

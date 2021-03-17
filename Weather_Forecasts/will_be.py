@@ -6,15 +6,15 @@ from api_key import API_KEY
 owm = pyowm.OWM(API_KEY)
 mgr = owm.weather_manager()
 
-#checks if there is rain in this week's forecast for LA
+# checks if there is rain in this week's forecast for LA
 forecaster = mgr.forecast_at_place('Los Angeles, US', '3h')
 
 # Write your code here
 print(forecaster.will_have_rain())
 print(forecaster.will_have_clouds())
 
-#The date specified must be a date that is included in the five day forecast. If the date is not in the forecast it will cause an error.
-print(forecaster.will_be_stormy_at(datetime(2021, 3, 16, 12, 0)))
+# The date specified must be a date that is included in the five day forecast. If the date is not in the forecast it will cause an error.
+#print(forecaster.will_be_stormy_at(datetime(2021, 3, 16, 12, 0)))
 
 print(forecaster.will_be_foggy_at(timestamps.tomorrow()))
 

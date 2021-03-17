@@ -1,2 +1,3 @@
-import os
-API_KEY = os.environ['API_KEY']
+from pyowm.owm import OWM
+
+API_KEY = q

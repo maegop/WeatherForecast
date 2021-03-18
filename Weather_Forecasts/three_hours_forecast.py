@@ -1,7 +1,7 @@
 import pyowm
 from api_key import API_KEY
 
-degree_sign= u'\N{DEGREE SIGN}'
+degree_sign = u'\N{DEGREE SIGN}'
 
 owm = pyowm.OWM(API_KEY)
 
@@ -13,7 +13,7 @@ weather_list = forecast.weathers
 
 print('Three hours forecast (Times are in GMT):')
 for weather in weather_list:
-    temp = weather.temperature(unit='fahrenheit')['temp']
+    temp = weather.temperature(unit='fahrenheit')['temp']  # fahrenheit
     print(weather.reference_time('iso'), f'Temperature: {temp}{degree_sign}F')
 
 """
